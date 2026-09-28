@@ -119,16 +119,7 @@ svg { display: block; }
 .work-tile__caption svg { width: 17px; height: 17px; }
 
 .work-section .section-heading h2 { margin-bottom: 0; }
-.work-section .work-grid { grid-template-areas: "one two three" "four two six" "four five six"; grid-template-rows: repeat(3, clamp(145px, 15.5vw, 235px)); gap: 14px; }
-.work-section .work-tile { position: relative; min-height: 0; overflow: hidden; }
-.work-section .work-tile:nth-child(1) { grid-area: one; }
-.work-section .work-tile:nth-child(2) { grid-area: two; }
-.work-section .work-tile:nth-child(3) { grid-area: three; }
-.work-section .work-tile:nth-child(4) { grid-area: four; }
-.work-section .work-tile:nth-child(5) { grid-area: five; }
-.work-section .work-tile:nth-child(6) { grid-area: six; }
-.work-section .work-tile__image { width: 100%; height: 100%; aspect-ratio: auto; }
-.work-section .work-tile__caption { position: absolute; inset: auto 0 0; padding: 38px 16px 16px; background: linear-gradient(0deg, rgba(0, 0, 0, .5), transparent); color: #fff; }
+/*SHUYERGA QOYAMAN */
 .work-section__footer { display: flex; justify-content: center; margin-top: 57px; }
 
 .location-section { padding-block: 105px 120px; background: #e7ebed; }
@@ -429,9 +420,38 @@ svg { display: block; }
 .work-add-photos:hover { background: #0b4566; }
 .work-add-photos:focus-visible { outline: 3px solid #4f9cc7; outline-offset: 3px; }
 .work-add-photos:disabled { opacity: .6; cursor: wait; }
+/* ===== OUR WORK — MOBILE / TABLET (2 ustun, rasmdagidek) ===== */
+@media (max-width: 850px) {
+  .work-grid.work-layout,
+  .work-section .work-grid.work-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "one   two"
+      "three two"
+      "three four"
+      "five  six"
+      "seven seven";
+    grid-template-rows: repeat(4, clamp(150px, 21vw, 205px)) auto;
+    aspect-ratio: auto;
+    gap: 12px;
+  }
+  .work-grid.work-layout .work-tile { width: auto; height: auto; aspect-ratio: auto; }
+  .work-grid.work-layout .work-tile[data-slot="7"] { aspect-ratio: 2 / 1; }
+  .work-grid.work-layout .work-tile[data-slot="7"] .work-tile__image { position: absolute; inset: 0; }
+  .work-grid.work-layout .work-tile__image img { object-fit: cover; }
+}
+
+@media (max-width: 600px) {
+  .work-grid.work-layout,
+  .work-section .work-grid.work-layout {
+    grid-template-rows: repeat(4, clamp(120px, 34vw, 185px)) auto;
+    gap: 9px;
+  }
+  .work-grid.work-layout .work-tile__caption { align-items: end; gap: 5px; padding: 30px 11px 11px; font-size: 10px; }
+  .work-grid.work-layout .work-tile__caption svg { flex: none; width: 15px; height: 15px; }
+}
+
 @media (max-width: 640px) {
-  .work-grid.work-layout, .work-section .work-grid.work-layout { display: flex; flex-direction: column; aspect-ratio: auto; gap: 14px; }
-  .work-grid.work-layout .work-tile { width: 100%; aspect-ratio: 3 / 2; }
-  .work-grid.work-layout .work-tile[data-slot="2"], .work-grid.work-layout .work-tile[data-slot="4"] { aspect-ratio: 3 / 4; }
   .work-photos.gallery-page__grid { grid-template-columns: 1fr; }
 }

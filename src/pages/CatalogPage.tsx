@@ -17,7 +17,7 @@ export default function CatalogPage() {
       <section className="catalog-content section-shell" aria-label="Album catalog">
         <div className="catalog-filters" aria-label="Filter albums by series">
           <div className="catalog-filters__buttons">
-            <button type="button" className={!current ? "is-active" : ""} aria-pressed={!current} onClick={() => setSearchParams({})}>All albums</button>
+            <button type="button" className={!current ? "is-active" : ""} aria-pressed={!current} onClick={() => setSearchParams({})}>Hamma albomlar</button>
             {categories.map((item) => (
               <button key={item.id} type="button" className={current?.id === item.id ? "is-active" : ""} aria-pressed={current?.id === item.id} onClick={() => setSearchParams({ series: item.slug })}>
                 {item.name}

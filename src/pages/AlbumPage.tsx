@@ -63,12 +63,12 @@ export default function AlbumPage() {
             <h1>{album.name}<span>.</span></h1>
             <p className="product-information__lead">{album.short}</p>
             <div className="product-information__price">
-              <span>STARTING FROM</span>
+              <span>Shu yerdan boshlash</span>
               <strong>{formatPrice(album.price_uzs)} {album.price_label && <small>{album.price_label}</small>}</strong>
             </div>
-            <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="button button--dark product-information__order">Order via Telegram <ArrowRightIcon /></a>
+            <a href={orderUrl} target="_blank" rel="noopener noreferrer" className="button button--dark product-information__order"> Buyurtma qilish <ArrowRightIcon /></a>
             <div className="product-specs">
-              <h2>The details</h2>
+              <h2>Tafsilotlar</h2>
               <p className="product-specs__text">{album.description}</p>
             </div>
           </div>

@@ -12,15 +12,15 @@ export const images = {
 } as const;
 
 export const imageDescriptions: Record<string, string> = {
-  [images.noir]: "Charcoal cloth hardcover graduation album",
-  [images.ivory]: "Ivory linen hardcover graduation album",
-  [images.slate]: "Slate cloth hardcover graduation album",
-  [images.stone]: "Stone linen hardcover graduation album",
-  [images.open]: "Open graduation album showing portrait page layouts",
-  [images.detail]: "Close-up of the album's binding and thick pages",
-  [images.campus]: "Graduates photographed together outside their university",
-  [images.studio]: "Graduates photographed together in the studio",
-  [images.collection]: "Graduating friends walking together on campus",
+  [images.noir]: "To‘q kulrang matoli qattiq muqovali bitiruv albomi",
+  [images.ivory]: "Fil suyagi rangidagi zig‘ir matoli qattiq muqovali bitiruv albomi",
+  [images.slate]: "Kulrang matoli qattiq muqovali bitiruv albomi",
+  [images.stone]: "Tosh rangidagi zig‘ir matoli qattiq muqovali bitiruv albomi",
+  [images.open]: "Portret sahifalari ko‘rinib turgan ochiq bitiruv albomi",
+  [images.detail]: "Albom muqovasi va qalin sahifalarining yaqindan ko‘rinishi",
+  [images.campus]: "Universitet oldida birga tushgan bitiruvchilar",
+  [images.studio]: "Studiyada birga tushgan bitiruvchilar",
+  [images.collection]: "Kampusda birga ketayotgan bitiruvchi do‘stlar",
 };
 
 // All "order" CTAs across the site open Telegram — replace with the real Telegram URL.
@@ -80,10 +80,10 @@ export const albums: Album[] = [
     series: "Classic",
     image: images.noir,
     gallery: [images.noir, images.open, images.detail, images.campus],
-    short: "A little less, remembered more.",
+    short: "Kamroq — lekin ko‘proq esda qolarli.",
     description:
-      "A graphic, understated edition with a charcoal cloth cover. A place for every face and every little moment that made the year yours.",
-    finish: "Charcoal bookcloth",
+      "To‘q kulrang matoli muqovali, vazmin va uslubli nashr. Har bir yuz va yilni sizniki qilgan har bir kichik lahza uchun joy bor.",
+    finish: "To‘q kulrang matoli muqova",
   },
   {
     slug: "ivory",
@@ -92,10 +92,10 @@ export const albums: Album[] = [
     series: "Classic",
     image: images.ivory,
     gallery: [images.ivory, images.detail, images.open, images.studio],
-    short: "A softer way to keep it all.",
+    short: "Hamma xotirani yumshoqroq saqlash usuli.",
     description:
-      "Warm linen and generous white space give your class story the feeling of a beautifully considered art book.",
-    finish: "Ivory woven linen",
+      "Issiq zig‘ir matosi va keng oq joylar sinfingiz tarixiga chiroyli o‘ylangan san’at kitobi tusini beradi.",
+    finish: "Fil suyagi rangidagi to‘qima zig‘ir mato",
   },
   {
     slug: "slate",
@@ -104,10 +104,10 @@ export const albums: Album[] = [
     series: "Editorial",
     image: images.slate,
     gallery: [images.slate, images.open, images.campus, images.detail],
-    short: "Quietly modern, unmistakably yours.",
+    short: "Vazmin zamonaviylik — aynan sizniki.",
     description:
-      "A cool-toned cover and clean editorial layouts make room for portraits, places and the details worth remembering.",
-    finish: "Slate cloth hardcover",
+      "Sovuq ohangdagi muqova va silliq jurnal uslubidagi sahifalar portretlar, joylar va esda qolarli detallar uchun joy yaratadi.",
+    finish: "Kulrang matoli qattiq muqova",
   },
   {
     slug: "stone",
@@ -116,10 +116,10 @@ export const albums: Album[] = [
     series: "Editorial",
     image: images.stone,
     gallery: [images.stone, images.open, images.detail, images.collection],
-    short: "The beauty of keeping it simple.",
+    short: "Oddiylikning o‘ziga xos go‘zalligi.",
     description:
-      "Natural texture and a timeless neutral finish, designed to feel just as relevant years from now as it does today.",
-    finish: "Stone linen hardcover",
+      "Tabiiy mato va hech qachon eskirmaydigan neytral rang — yillar o‘tib ham bugungidek dolzarb ko‘rinadi.",
+    finish: "Tosh rangidagi zig‘ir matoli qattiq muqova",
   },
   {
     slug: "portrait",
@@ -128,10 +128,10 @@ export const albums: Album[] = [
     series: "Signature",
     image: images.open,
     gallery: [images.open, images.studio, images.campus, images.noir],
-    short: "Everyone belongs in the story.",
+    short: "Bu hikoyada hamma bor.",
     description:
-      "An image-led edition where individual portraits and the feeling of being together get equal space on the page.",
-    finish: "Your choice of cloth cover",
+      "Suratlarga urg‘u berilgan nashr — yakka portretlar va birga bo‘lish hissiga sahifada teng joy ajratilgan.",
+    finish: "Matoli muqovani o‘zingiz tanlaysiz",
   },
   {
     slug: "archive",
@@ -140,10 +140,10 @@ export const albums: Album[] = [
     series: "Signature",
     image: images.detail,
     gallery: [images.detail, images.open, images.ivory, images.collection],
-    short: "Made to revisit, made to last.",
+    short: "Qayta varaqlash uchun, uzoq yashash uchun.",
     description:
-      "The most tactile expression of your final year, with considered layouts and substantial lay-flat pages.",
-    finish: "Premium cloth hardcover",
+      "So‘nggi yilingizning eng boy ifodasi — puxta o‘ylangan sahifalar va qalin, tekis ochiladigan qog‘oz bilan.",
+    finish: "Premium matoli qattiq muqova",
   },
 ];
 
@@ -160,45 +160,45 @@ export type WorkItem = {
 export const work: WorkItem[] = [
   {
     id: "together",
-    title: "Outside, together",
+    title: "Tashqarida, birga",
     category: "Campus",
     image: images.campus,
-    alt: "Graduates together on the steps of a university building",
+    alt: "Universitet binosi zinapoyasida birga turgan bitiruvchilar",
   },
   {
     id: "between-pages",
-    title: "Between the pages",
+    title: "Sahifalar orasida",
     category: "The album",
     image: images.open,
-    alt: "An open yearbook with designed portrait pages",
+    alt: "Dizayn qilingan portret sahifali ochiq bitiruv albomi",
   },
   {
     id: "last-walk",
-    title: "The last walk",
+    title: "So‘nggi sayr",
     category: "Campus",
     image: images.collection,
-    alt: "Friends in graduation gowns walking on campus",
+    alt: "Kampusda mantiyada ketayotgan do‘stlar",
   },
   {
     id: "in-the-studio",
-    title: "In the studio",
+    title: "Studiyada",
     category: "Studio",
     image: images.studio,
-    alt: "Two graduates photographed together in a studio",
+    alt: "Studiyada birga suratga tushgan ikki bitiruvchi",
   },
   {
     id: "the-details",
-    title: "The details",
+    title: "Mayda detallar",
     category: "The album",
     image: images.detail,
-    alt: "Close-up of the binding and pages of a graduation album",
+    alt: "Bitiruv albomi muqovasi va sahifalarining yaqindan ko‘rinishi",
   },
   {
     id: "a-place-for-everyone",
-    title: "A place for everyone",
+    title: "Hamma uchun joy bor",
     category: "The album",
     image: images.ivory,
-    alt: "Ivory cloth graduation album on a studio surface",
+    alt: "Studiyada turgan fil suyagi rangidagi matoli bitiruv albomi",
   },
 ];
 
@@ -218,27 +218,27 @@ export type Location = {
 
 export const locations: Location[] = [
   {
-    city: "Tashkent",
+    city: "Toshkent",
     markerPosition: { left: "75%", top: "51.9%" },
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",
   },
   {
-    city: "Samarkand",
+    city: "Samarqand",
     markerPosition: { left: "62.7%", top: "69.9%" },
     labelSide: "left",
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",
   },
   {
-    city: "Navoi",
+    city: "Navoiy",
     markerPosition: { left: "54.3%", top: "64.8%" },
     labelSide: "left",
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",
@@ -246,24 +246,24 @@ export const locations: Location[] = [
   {
     city: "Nukus",
     markerPosition: { left: "23.8%", top: "39.9%" },
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",
   },
   {
-    city: "Jizzakh",
+    city: "Jizzax",
     markerPosition: { left: "67.4%", top: "64.5%" },
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",
   },
   {
-    city: "Andijan",
+    city: "Andijon",
     markerPosition: { left: "91.2%", top: "56.5%" },
     labelSide: "left",
-    representativeName: "First Name Last Name",
+    representativeName: "Ism Familiya",
     phone: "+998 XX XXX XX XX",
     instagram: "@username",
     telegram: "@username",

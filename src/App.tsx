@@ -17,16 +17,22 @@ import { AuthProvider } from "./lib/auth";
 import { PublicContentProvider, usePublicContent } from "./lib/public-content";
 import AlbumPage from "./pages/AlbumPage";
 import CatalogPage from "./pages/CatalogPage";
-import ContactPage from "./pages/ContactPage";
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
 
 function RouteEffects() {
-  const { pathname } = useLocation();
+  const { pathname, hash, key } = useLocation();
   const { settings } = usePublicContent();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (hash) {
+      requestAnimationFrame(() => {
+        document.querySelector(hash)?.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+
     const title = pathname === "/" ? settings.meta_title_home :
       pathname.startsWith("/albums/") ? `${settings.brand_name} album` :
       pathname === "/catalog" ? settings.meta_title_catalog :
@@ -47,7 +53,7 @@ function RouteEffects() {
       document.head.appendChild(tag);
     }
     tag.setAttribute("content", description);
-  }, [pathname, settings]);
+  }, [pathname, hash, key, settings]);
 
   return null;
 }
@@ -98,7 +104,7 @@ const router = createBrowserRouter(
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/albums/:slug" element={<AlbumPage />} />
         <Route path="/work" element={<WorkPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/contact" element={<Navigate to="/#locations" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Route>

@@ -35,7 +35,11 @@ function LocationSection() {
   }, [selected]);
 
   return (
-    <section className="location-section" aria-labelledby="location-heading">
+    <section
+  id="locations"
+  className="location-section"
+  aria-labelledby="location-heading"
+>
       <div className="section-shell">
         <Reveal className="location-section__heading">
           <span className="section-kicker">{settings.location_kicker}</span>

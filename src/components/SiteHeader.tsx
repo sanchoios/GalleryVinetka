@@ -4,15 +4,22 @@ import { usePublicContent } from "../lib/public-content";
 import { ArrowUpRightIcon, CloseIcon, MenuIcon } from "./Icons";
 
 const navigation = [
-  { label: "Home", to: "/" },
-  { label: "Catalog", to: "/catalog" },
-  { label: "Work", to: "/work" },
-  { label: "Contact", to: "/contact" },
+  { label: "Bosh sahifa", to: "/" },
+  { label: "Katalog", to: "/catalog" },
+  { label: "Ishlarimiz", to: "/work" },
+  { label: "Bog‘lanish", to: "/#locations" },
 ];
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+  // "Bog‘lanish" xaritaga olib boradi. Bu funksiya Bosh sahifa va Bog‘lanish
+// ikkalasi birdaniga yonib turmasligi uchun kerak.
+const isCurrent = (to: string, isActive: boolean) => {
+  if (to === "/#locations") return pathname === "/" && hash === "#locations";
+  if (to === "/") return isActive && hash !== "#locations";
+  return isActive;
+};
   const { settings } = usePublicContent();
 
   useEffect(() => setMenuOpen(false), [pathname]);
@@ -45,7 +52,7 @@ export default function SiteHeader() {
 
         <nav className="desktop-nav" aria-label="Main navigation">
           {navigation.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => `desktop-nav__link${isActive ? " is-active" : ""}`}>
+            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => `desktop-nav__link${isCurrent(item.to, isActive) ? " is-active" : ""}`}>
               {item.label}
             </NavLink>
           ))}

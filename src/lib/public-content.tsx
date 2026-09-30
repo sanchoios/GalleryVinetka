@@ -77,16 +77,42 @@ export async function loadPublicContent(): Promise<PublicContent> {
 }
 
 export function PublicContentProvider({ children }: { children: ReactNode }) {
-  const [content, setContent] = useState<PublicContent>(getFallbackContent());
+  const [content, setContent] = useState<PublicContent | null>(() =>
+    isSupabaseConfigured ? null : getFallbackContent()
+  );
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     if (!isSupabaseConfigured) return;
+
     let cancelled = false;
+
     loadPublicContent()
-      .then((data) => { if (!cancelled) setContent(data); })
-      .catch(() => { /* keep fallback so the public site still renders */ });
-    return () => { cancelled = true; };
+      .then((data) => {
+        if (!cancelled) setContent(data);
+      })
+      .catch(() => {
+        if (!cancelled) setError(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
-  return <PublicContentContext.Provider value={content}>{children}</PublicContentContext.Provider>;
+  if (error) {
+    return (
+      <p role="alert">
+        Ma’lumotlarni yuklab bo‘lmadi. Sahifani yangilang.
+      </p>
+    );
+  }
+
+  if (!content) return null;
+
+  return (
+    <PublicContentContext.Provider value={content}>
+      {children}
+    </PublicContentContext.Provider>
+  );
 }

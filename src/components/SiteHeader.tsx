@@ -46,8 +46,15 @@ const isCurrent = (to: string, isActive: boolean) => {
     <header className="site-header">
       <div className="site-header__inner">
         <Link to="/" className="wordmark" aria-label={`${settings.brand_name} home`} onClick={() => setMenuOpen(false)}>
-          {settings.logo_url ? <img src={settings.logo_url} alt={settings.brand_name} style={{ height: 28, width: "auto" }} /> : <>{settings.brand_name}<span className="wordmark__dot">.</span></>}
-          <span className="wordmark__descriptor">{settings.brand_descriptor}</span>
+         <img
+  src="/gllogo.svg"
+  alt="Vinetka Gallery"
+  style={{
+    height: 250,
+    width: "auto",
+    display: "block",
+  }}
+/>
         </Link>
 
         <nav className="desktop-nav" aria-label="Main navigation">

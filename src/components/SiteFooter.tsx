@@ -30,7 +30,7 @@ export default function SiteFooter() {
         </div>
       </div>
       <div className="site-footer__bottom page-gutter">
-        <span>&copy; {new Date().getFullYear()} {settings.brand_name} YEARBOOK STUDIO</span>
+        <span>&copy; {new Date().getFullYear()} {settings.brand_name} </span>
         <span>{settings.footer_tagline}</span>
       </div>
     </footer>

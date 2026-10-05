@@ -70,17 +70,17 @@ function LocationSection() {
         {selected && (
           <>
             <div className="city-panel__top">
-              <span className="section-kicker">YOUR CITY / CONTACT</span>
+              <span className="section-kicker">Shahringiz / Bog‘lanish</span>
               <button ref={closeRef} type="button" className="city-panel__close" onClick={() => setActiveCity(null)} aria-label="Close panel"><CloseIcon /></button>
             </div>
             <h3>{selected.city}</h3>
             <dl className="city-panel__details">
               <div>
-                <dt>Representative</dt>
+                <dt>Vakil</dt>
                 <dd>{selected.representative_name}</dd>
               </div>
               <div>
-                <dt>Phone</dt>
+                <dt>Telefon</dt>
                 <dd><a href={`tel:${selected.phone.replace(/[^\d+]/g, "")}`}>{selected.phone}</a></dd>
               </div>
               <div>
@@ -92,7 +92,7 @@ function LocationSection() {
                 <dd><a href={telegramHref(selected.telegram)} target="_blank" rel="noopener noreferrer">{selected.telegram} <ArrowUpRightIcon /></a></dd>
               </div>
             </dl>
-            <a href={telegramHref(settings.telegram_url)} target="_blank" rel="noopener noreferrer" className="text-link">Or start an order online <ArrowRightIcon /></a>
+            <a href={telegramHref(settings.telegram_url)} target="_blank" rel="noopener noreferrer" className="text-link">Buyurtma bering <ArrowRightIcon /></a>
           </>
         )}
       </aside>

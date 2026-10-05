@@ -116,8 +116,8 @@ export type PublicContent = {
 
 export const DEFAULT_SETTINGS: SiteSettings = {
   id: "main",
-  brand_name: "FOLIO",
-  brand_descriptor: "YEARBOOK STUDIO",
+  brand_name: "Gallery Vinetka",
+  brand_descriptor: "Vinetka",
   footer_text: "For the years that made you.",
   footer_tagline: "MADE TO BE KEPT.",
   contact_email: "hello@folioyearbooks.com",
@@ -135,7 +135,7 @@ export const DEFAULT_SETTINGS: SiteSettings = {
   hero_image_url: "/images/hero-album.jpg",
   hero_title: "FOLIO.",
   hero_subtitle: "Yearbooks for the years\nthat made you.",
-  hero_button_text: "Explore the albums",
+  hero_button_text: "Albomlar bilan tanishing",
   hero_button_link: "/catalog",
   albums_heading: "Albums",
   albums_button_text: "View full album",

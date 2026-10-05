@@ -21,8 +21,8 @@ export default function AlbumPage() {
     return (
       <div className="not-found section-shell">
         <span className="section-kicker">404 / NOT FOUND</span>
-        <h1>That album isn't here.</h1>
-        <Link to="/catalog" className="button button--dark">Back to the collection <ArrowRightIcon /></Link>
+        <h1>Ushbu albom topilmadi.</h1>
+        <Link to="/catalog" className="button button--dark">Kolleksiyaga qaytish <ArrowRightIcon /></Link>
       </div>
     );
   }
@@ -36,12 +36,12 @@ export default function AlbumPage() {
   return (
     <>
       <div className="product-page section-shell">
-        <nav className="breadcrumb" aria-label="Breadcrumb"><Link to="/catalog">Albums</Link><span>/</span><span>{album.name}</span></nav>
+        <nav className="breadcrumb" aria-label="Breadcrumb"><Link to="/catalog">Albomlar</Link><span>/</span><span>{album.name}</span></nav>
         <div className="product-layout">
           <div className="product-gallery">
             <button type="button" className="product-gallery__main" onClick={() => setLightboxOpen(true)} aria-label={`Enlarge ${album.name} album image`}>
               <img src={gallery[activeImage].src} alt={gallery[activeImage].alt} fetchPriority="high" />
-              <span>VIEW LARGER +</span>
+              <span>Kattaroq ko‘rish +</span>
             </button>
             <div className="product-gallery__bottom">
               <div className="product-gallery__thumbs" aria-label="Album images">
@@ -59,7 +59,7 @@ export default function AlbumPage() {
           </div>
 
           <div className="product-information">
-            <span className="section-kicker">{album.series ? `${album.series.toUpperCase()} SERIES` : "EDITION"}{album.number ? ` / EDITION ${album.number}` : ""}</span>
+            <span className="section-kicker">{album.series ? `${album.series.toUpperCase()} SERIES` : "Versiya"}{album.number ? ` / EDITION ${album.number}` : ""}</span>
             <h1>{album.name}<span>.</span></h1>
             <p className="product-information__lead">{album.short}</p>
             <div className="product-information__price">

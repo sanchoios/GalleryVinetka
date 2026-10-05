@@ -62,8 +62,8 @@ function NotFound() {
   return (
     <div className="not-found section-shell">
       <span className="section-kicker">404 / NOT FOUND</span>
-      <h1>We lost that page.</h1>
-      <Link to="/" className="button button--dark">Back to home <ArrowRightIcon /></Link>
+      <h1>Ushbu sahifa topilmadi</h1>
+      <Link to="/" className="button button--dark">Bosh sahifaga qaytish <ArrowRightIcon /></Link>
     </div>
   );
 }

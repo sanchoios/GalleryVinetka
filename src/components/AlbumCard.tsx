@@ -17,7 +17,7 @@ export default function AlbumCard({ album }: { album: Album }) {
           <span className="album-card__series">{album.series}{album.number ? ` / ${album.number}` : ""}</span>
           <h3>{album.name}</h3>
         </div>
-        <span className="album-card__price">{album.price_uzs ? `From ${formatPrice(album.price_uzs)}` : ""}</span>
+        <span className="album-card__price">{album.price_uzs ? `From ${formatPrice(album.price_uzs)}` : "dan"}</span>
       </div>
     </Link>
   );

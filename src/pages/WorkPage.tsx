@@ -44,7 +44,7 @@ export default function WorkPage() {
   );
   return (
     <section className="gallery-page section-shell">
-      <Link to="/work">← Our Work</Link>
+      <Link to="/work">← Bizning ishlar</Link>
       <h1 className="gallery-page__title">{selected?.title ?? "Kategoriya topilmadi"}</h1>
       {loading && <p>Yuklanmoqda…</p>}
       {error && <p role="alert">{error}</p>}

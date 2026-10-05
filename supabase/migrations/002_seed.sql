@@ -106,7 +106,7 @@ insert into public.site_settings (
   'Our work | FOLIO', 'Photography from FOLIO yearbook sessions.',
   'Start an order | FOLIO', 'Get in touch with FOLIO Yearbook Studio.',
   '/images/hero-album.jpg', 'FOLIO.', E'Yearbooks for the years\nthat made you.',
-  'Explore the albums', '/catalog',
+  'Albomlar bilan tanishing', '/catalog',
   'Albums', 'View full album', 'Our Clients', '02 / THE WORK', 'Our Work', 'Explore our work',
   '03 / WHERE WE ARE', 'Here for your class.', 'Select your city on the map to see who to contact.',
   'START YOUR STORY / CONTACT', E'Let''s make\nit yours.',

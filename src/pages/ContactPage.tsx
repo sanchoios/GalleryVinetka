@@ -80,7 +80,7 @@ export default function ContactPage() {
           {emailDraft && <p className="contact-form__notice" role="status">Your email draft is ready. <a href={emailDraft}>Open it again</a> if your mail app did not appear.</p>}
         </form>
       </section>
-      <div className="contact-bottom section-shell"><Link to="/catalog" className="text-link">Still deciding? Explore the albums <ArrowRightIcon /></Link></div>
+      <div className="contact-bottom section-shell"><Link to="/catalog" className="text-link">Still deciding? Albomlar bilan tanishing <ArrowRightIcon /></Link></div>
     </>
   );
 }

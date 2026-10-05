@@ -17,12 +17,12 @@ export default function SiteFooter() {
         <div className="site-footer__links">
           <div>
             <span className="footer-label">Explore</span>
-            <Link to="/catalog">The albums</Link>
-            <Link to="/work">Our work</Link>
-            <a href={telegramHref(settings.telegram_url)} target="_blank" rel="noopener noreferrer">Start an order</a>
+            <Link to="/catalog">Albomlar</Link>
+            <Link to="/work">Bizning ishlar</Link>
+            <a href={telegramHref(settings.telegram_url)} target="_blank" rel="noopener noreferrer">Buyurtma berish</a>
           </div>
           <div>
-            <span className="footer-label">Get in touch</span>
+            <span className="footer-label">Biz bilan bog‘laning</span>
             <a href={`mailto:${settings.contact_email}`}>{settings.contact_email} <ArrowUpRightIcon /></a>
             {settings.instagram_url && <a href={settings.instagram_url} target="_blank" rel="noopener noreferrer">Instagram <ArrowUpRightIcon /></a>}
             <span>{cities}</span>
